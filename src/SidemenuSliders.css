@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+  overflow: hidden;
+
+}
+
+.PrettyLandingPage{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.Interface {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  animation: animate 35s  linear infinite;
+  background: url('./assets/1.png');
+  filter: invert(100%);
+
+}
+
+/*---------------------*/
+
+.anotherLayerOfBackground{
+  height: 610px;
+  width: 365px;
+  background: linear-gradient(to right, rgb(0, 242, 96), rgb(5, 117, 230));
+  position: relative;
+}
+
+.Background {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  filter: invert(100%);
+}
+
+@keyframes animate{
+  from{
+    background-position: 0 0;
+  }
+  to{
+    background-position: 100% 0;
+  }
+}
+
+@keyframes hovering{
+  from{
+    background-position: 0 0;
+  }
+  to{
+    background-position: 100% 0;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  height: 25%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentSlider{
+  display: flex;
+  height: 57%;
+  width: 300%;
+  overflow-x: auto;
+  position: relative;
+  transition: 0.2s;
+}
+
+.active-tab-1{
+  transition: 0.2s;
+  transform: traslateX(0%);  
+}
+
+.active-tab-2{
+  transform: traslateX(-33.333%);  
+  transition: 0.2s;
+}
+
+.active-tab-3{
+  transform: traslateX(-66.666%);  
+  transition: 0.2s;
+}
+
+.content1 {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.2s;
+  width: 33.33333333%;
+}
+.content2 {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.2s;
+  width: 33.33333333%;
+}
+.content3 {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.2s;
+  width: 33.33333333%;
+}
+
+.buttonContainer {
+  display: flex;
+  height: 14%;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ------------------------ */
+
+.logoPng {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+ 
+}
+
+.imgPng {
+  position: absolute;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+ 
+}
+
+.imgContainer {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 0;
+  padding: 56.25% 0 0 0;
+  overflow: hidden;
+}
+
+.textContainer {
+  display: block;
+  max-width: 365px;
+  width: auto;
+  height: 20%;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: url(./assets/WarlowSans.otf);
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #4f4f4f;
+}
+
+
+.button {
+  padding: 12px 24px;
+  color: white;
+  width: 200px;
+  cursor: pointer;
+  background: #01bf4c;
+  font-size: 20px;
+  border-radius: 500px; /* This is supposed to be a big number in pixels so it looks completely bordered in all resolutions*/
+}
+  
+.button:hover {
+ 
+  transition: 0.2s;
+  background: #034c96;
+
+}
+
+
+.Tracker {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 4%;
+}
+
+.Tracker-0 {
+  width: 10px;
+  height: 10px;
+  background-color: #868686;
+  margin: 5px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.Tracker-0:hover {
+  background-color: #4c4c4c;
+  transition: 0.1s;
+}
+
+.tracker-active{
+  background-color: #4c4c4c;
+}
+
+
+@media screen and (device-aspect-ratio: 40/71) {
+
+.anotherLayerOfBackground{
+  height: 500px;
+}
+
+}
