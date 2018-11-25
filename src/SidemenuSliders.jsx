@@ -22,19 +22,8 @@ class SidemenuSliders extends Component {
   }
 
   render() {
-    let imgToRender = this.state.visualizingPage;
-    let contentSliderFiller = ""
-    if(this.state.visualizingPage === 1){
-      contentSliderFiller = "active-tab-1";
-    }else if (this.state.visualizingPage === 2){
-      contentSliderFiller = "active-tab-2";
-    }else if (this.state.visualizingPage === 3){
-      contentSliderFiller = "active-tab-3";
-    }else{
-      contentSliderFiller = "active-tab-1";
-    }
-
-
+    let style = {'transform': 'translateX(0%)'};
+    
     return (
       <div className="PrettyLandingPage">
         <div className="anotherLayerOfBackground">
@@ -45,7 +34,7 @@ class SidemenuSliders extends Component {
               </div>
               
 
-              <div className="contentSlider contentSliderFiller">
+              <div className="contentSlider" style={style}>
                 <div className="content1">
                   <div className="imgContainer">
                      <img className="imgPng" src={imgtoShow1} alt="Img"/>
@@ -76,9 +65,9 @@ class SidemenuSliders extends Component {
 
 
               <div className="Tracker">
-                <div className="Tracker-0 tracker-active"></div>
-                <div className="Tracker-0"></div>
-                <div className="Tracker-0"></div>
+                <div onClick={e => this.moverIzq()} className="Tracker-0 tracker-active"></div>
+                <div onClick={e => this.moverIzq()} className="Tracker-0"></div>
+                <div onClick={e => this.moverIzq()} className="Tracker-0"></div>
               </div>
               <div className="buttonContainer">
                 <a className="button" onClick={this.moverIzq}>Make a reservation</a>
@@ -92,8 +81,3 @@ class SidemenuSliders extends Component {
 }
 
 export default SidemenuSliders;
-
-
-          /*  
-
-            */
